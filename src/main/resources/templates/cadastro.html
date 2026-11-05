@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro de Cliente | Donodont</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- MENU -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="/">
+            Donodont
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/sobre">Sobre</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="/cadastro">Cadastro</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- FORMULÁRIO DE CADASTRO -->
+<main class="container py-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-7">
+
+            <div class="card shadow">
+
+                <div class="card-body p-4">
+
+                    <h2 class="text-center text-primary mb-4">
+                        Cadastro de Cliente
+                    </h2>
+
+                    <p class="text-center text-secondary">
+                        Preencha seus dados para se cadastrar na Donodont.
+                    </p>
+
+                    <form>
+
+                        <!-- NOME -->
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Nome completo
+                            </label>
+
+                            <input type="text" class="form-control"
+                                   placeholder="Digite seu nome completo" required>
+
+                        </div>
+
+                        <!-- CPF E DATA DE NASCIMENTO -->
+                        <div class="row">
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    CPF
+                                </label>
+
+                                <input type="text" class="form-control"
+                                       placeholder="000.000.000-00" required>
+
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    Data de nascimento
+                                </label>
+
+                                <input type="date" class="form-control" required>
+
+                            </div>
+
+                        </div>
+
+                        <!-- EMAIL -->
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                E-mail
+                            </label>
+
+                            <input type="email" class="form-control"
+                                   placeholder="Digite seu e-mail" required>
+
+                        </div>
+
+                        <!-- TELEFONE -->
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Telefone
+                            </label>
+
+                            <input type="tel" class="form-control"
+                                   placeholder="(00) 00000-0000" required>
+
+                        </div>
+
+                        <!-- ENDEREÇO -->
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Endereço
+                            </label>
+
+                            <input type="text" class="form-control"
+                                   placeholder="Rua, número e bairro" required>
+
+                        </div>
+
+                        <!-- SENHAS -->
+                        <div class="row">
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    Senha
+                                </label>
+
+                                <input type="password" class="form-control"
+                                       placeholder="Crie uma senha" required>
+
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    Confirmar senha
+                                </label>
+
+                                <input type="password" class="form-control"
+                                       placeholder="Repita sua senha" required>
+
+                            </div>
+
+                        </div>
+
+                        <!-- BOTÃO CADASTRAR -->
+                        <button type="submit" class="btn btn-primary w-100">
+                            Cadastrar
+                        </button>
+
+                        <p class="text-center mt-3 mb-0">
+
+                            Já possui uma conta?
+
+                            <a href="/login">
+                                Faça login
+                            </a>
+
+                        </p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+<!-- RODAPÉ -->
+<footer class="bg-primary text-white text-center py-3">
+
+    <p class="mb-0">
+        © 2026 Donodont - Todos os direitos reservados.
+    </p>
+
+    <p class="mb-0">
+        Cuidando do seu sorriso!
+    </p>
+
+</footer>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
