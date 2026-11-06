@@ -1,27 +1,57 @@
-/* Estilos básicos da Donodont */
+/* Donodont - estilos básicos, mantendo o Bootstrap e o leiaute atual */
 body {
     background-color: #f8f9fa;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
 .navbar {
     background-color: #0d6efd !important;
 }
+
 .navbar-brand {
-    font-weight: bold;
+    font-weight: 700;
 }
+
 main {
+    flex: 1;
     min-height: 65vh;
 }
+
 .card {
     border: 0;
     border-radius: 10px;
 }
-.card-title {
+
+.card-title,
+.card h4 {
     color: #0d6efd;
 }
+
 footer {
     margin-top: 30px;
 }
-.form-control, .form-select {
+
+.form-control,
+.form-select {
     padding: 10px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 .2rem rgba(13, 110, 253, .15);
+}
+
+.alert {
+    border-radius: 8px;
+}
+
+.nav-link {
+    transition: opacity .2s ease;
+}
+
+.nav-link:hover {
+    opacity: .8;
 }
