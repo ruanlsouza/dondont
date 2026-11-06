@@ -1,4 +1,3 @@
-
 package senai499.com.br.donodont.controller;
 
 import org.springframework.stereotype.Controller;
@@ -32,4 +31,8 @@ public class PaginaController {
         return "painel";
     }
 
+    @GetMapping("/agendamento")
+    public String agendamento() {
+        return "agendamento";
+    }
 }
