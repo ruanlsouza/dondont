@@ -1,58 +1,34 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel do Cliente | Donodont</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel do paciente | Donodont</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container">
-        <a class="navbar-brand fw-bold" href="/painel">Donodont</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="/painel">Painel</a></li>
-                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="/sobre">Sobre</a></li>
-                <li class="nav-item"><a class="nav-link" href="/cadastro">Cadastro</a></li>
-                <li class="nav-item"><a class="nav-link" href="/login">Sair</a></li>
-            </ul>
-        </div>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" th:href="@{/}">dono<span>dont</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="menu"><ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link " th:href="@{/}">Início</a></li>
+      <li class="nav-item"><a class="nav-link " th:href="@{/sobre}">Sobre</a></li>
+      <li class="nav-item"><a class="nav-link " th:href="@{/login}">Entrar</a></li>
+      <li class="nav-item"><a class="nav-link " th:href="@{/cadastro}">Cadastro</a></li>
+      <li class="nav-item"><a class="nav-link active" th:href="@{/painel}">Painel</a></li>
+      <li class="nav-item"><a class="nav-link " th:href="@{/agendamento}">Agendamento</a></li>
+    </ul></div>
+  </div>
 </nav>
-<main class="container py-5">
-    <div class="text-center mb-5">
-        <h1 class="text-primary fw-bold">Bem-vindo à Donodont!</h1>
-        <p class="lead">Seu espaço para cuidar da saúde do seu sorriso.</p>
-    </div>
-    <div class="row g-4 justify-content-center">
-        <div class="col-md-6">
-            <div class="card shadow-sm h-100">
-                <div class="card-body text-center">
-                    <h4 class="text-primary">Agendar Consulta</h4>
-                    <p>Solicite um agendamento para seu atendimento odontológico.</p>
-                    <a href="/agendamento" class="btn btn-primary">Agendar</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="card shadow-sm h-100">
-                <div class="card-body text-center">
-                    <h4 class="text-primary">Meus Dados</h4>
-                    <p>Acesse a página de cadastro para conferir os campos de seus dados.</p>
-                    <a href="/cadastro" class="btn btn-primary">Ver Cadastro</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
-<footer class="bg-primary text-white text-center py-3">
-    <p class="mb-0">© 2026 Donodont - Todos os direitos reservados.</p>
-</footer>
+
+<main class="container py-5"><div class="mb-5"><span class="eyebrow">Área do paciente</span><h1 class="fw-bold mt-2">Seu espaço Donodont</h1><p class="muted">Acesse os atalhos para continuar utilizando o site.</p></div>
+<div class="row g-4"><div class="col-md-6"><article class="dashboard-card p-4"><div class="service-icon">＋</div><h3>Agendar consulta</h3><p>Escolha o serviço e informe a data desejada para solicitar um atendimento.</p><a class="btn btn-primary" th:href="@{/agendamento}">Fazer agendamento</a></article></div>
+<div class="col-md-6"><article class="dashboard-card p-4"><div class="service-icon">♡</div><h3>Meu cadastro</h3><p>Consulte os campos de cadastro disponíveis no projeto.</p><a class="btn btn-outline-primary" th:href="@{/cadastro}">Ver cadastro</a></article></div>
+<div class="col-md-6"><article class="dashboard-card p-4"><div class="service-icon">✦</div><h3>Conheça a clínica</h3><p>Saiba mais sobre a proposta e os objetivos da Donodont.</p><a class="btn btn-outline-primary" th:href="@{/sobre}">Sobre a Donodont</a></article></div>
+<div class="col-md-6"><article class="dashboard-card p-4"><div class="service-icon">⌂</div><h3>Página inicial</h3><p>Volte para a página principal e veja os serviços apresentados.</p><a class="btn btn-outline-primary" th:href="@{/}">Ir para início</a></article></div></div>
+<p class="small text-secondary mt-4">Painel demonstrativo: o acesso ainda não utiliza autenticação de usuário.</p></main>
+<footer class="site-footer"><div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"><span><strong>Donodont</strong> · Cuidando do seu sorriso.</span><small>© 2026 Donodont. Todos os direitos reservados.</small></div></footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
