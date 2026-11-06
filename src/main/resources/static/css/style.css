@@ -1,0 +1,73 @@
+:root {
+  --brand: #087f8c;
+  --brand-dark: #075b66;
+  --brand-light: #e8f7f7;
+  --ink: #17343a;
+  --muted: #64777b;
+  --surface: #ffffff;
+  --page: #f4f9fa;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--page);
+  color: var(--ink);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+main { flex: 1; }
+a { text-decoration: none; }
+.navbar { background: var(--brand-dark) !important; padding: 1rem 0; }
+.navbar-brand { font-size: 1.55rem; letter-spacing: -.04em; }
+.navbar-brand span { color: #9ce6df; }
+.navbar .nav-link { color: rgba(255,255,255,.82); margin-left: .45rem; border-radius: 999px; padding: .55rem .9rem !important; transition: .2s; }
+.navbar .nav-link:hover, .navbar .nav-link.active { color: #fff; background: rgba(255,255,255,.14); }
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 6.5rem 0;
+  background: linear-gradient(120deg, #e4f7f5 0%, #f5fbfc 55%, #d9f0f1 100%);
+}
+.hero::after {
+  content: ""; position: absolute; width: 360px; height: 360px; border-radius: 50%;
+  right: -90px; top: -130px; background: rgba(8,127,140,.09);
+}
+.eyebrow { color: var(--brand); font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.hero h1 { max-width: 720px; font-size: clamp(2.4rem, 5vw, 4.3rem); line-height: 1.08; font-weight: 800; letter-spacing: -.055em; }
+.hero p { max-width: 610px; color: var(--muted); font-size: 1.12rem; line-height: 1.8; }
+.text-brand { color: var(--brand) !important; }
+.btn-primary { --bs-btn-bg: var(--brand); --bs-btn-border-color: var(--brand); --bs-btn-hover-bg: var(--brand-dark); --bs-btn-hover-border-color: var(--brand-dark); --bs-btn-active-bg: var(--brand-dark); --bs-btn-active-border-color: var(--brand-dark); border-radius: 999px; padding: .75rem 1.35rem; font-weight: 700; }
+.btn-outline-primary { --bs-btn-color: var(--brand); --bs-btn-border-color: var(--brand); --bs-btn-hover-bg: var(--brand); --bs-btn-hover-border-color: var(--brand); border-radius: 999px; padding: .75rem 1.35rem; font-weight: 700; }
+.section-space { padding: 5rem 0; }
+.section-heading { max-width: 680px; margin: 0 auto 2.5rem; text-align: center; }
+.section-heading h2 { font-weight: 800; letter-spacing: -.04em; }
+.section-heading p { color: var(--muted); }
+.service-card, .content-card, .form-card, .dashboard-card {
+  height: 100%; border: 1px solid #e4eeee; border-radius: 1.2rem; background: var(--surface);
+  box-shadow: 0 12px 34px rgba(22,65,72,.06); transition: transform .2s, box-shadow .2s;
+}
+.service-card:hover, .dashboard-card:hover { transform: translateY(-5px); box-shadow: 0 18px 38px rgba(22,65,72,.11); }
+.service-icon { display: grid; place-items: center; width: 54px; height: 54px; margin-bottom: 1.2rem; border-radius: 16px; background: var(--brand-light); color: var(--brand); font-size: 1.55rem; }
+.service-card h3, .dashboard-card h3 { font-size: 1.15rem; font-weight: 750; }
+.service-card p, .dashboard-card p, .muted { color: var(--muted); line-height: 1.7; }
+.soft-section { background: #eaf5f5; }
+.content-card, .form-card { padding: clamp(1.5rem, 4vw, 2.5rem); }
+.form-control, .form-select { min-height: 48px; border-color: #d7e5e6; border-radius: .75rem; }
+.form-control:focus, .form-select:focus { border-color: var(--brand); box-shadow: 0 0 0 .2rem rgba(8,127,140,.12); }
+.form-label { color: #34545a; font-weight: 650; }
+.page-intro { padding: 3.5rem 0 2rem; text-align: center; }
+.page-intro h1 { font-weight: 800; letter-spacing: -.045em; }
+.site-footer { margin-top: auto; padding: 1.6rem 0; background: #073f48; color: rgba(255,255,255,.82); }
+.site-footer strong { color: #fff; }
+.pill { display: inline-block; padding: .4rem .8rem; border-radius: 999px; background: var(--brand-light); color: var(--brand-dark); font-size: .8rem; font-weight: 750; }
+@media (max-width: 991.98px) {
+  .navbar .nav-link { margin: .15rem 0; }
+  .hero { padding: 4.5rem 0; }
+}
+@media (max-width: 575.98px) {
+  .section-space { padding: 3.5rem 0; }
+  .hero { padding: 3.8rem 0; }
+}
