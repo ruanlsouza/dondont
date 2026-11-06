@@ -1,35 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre | Donodont</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" th:href="@{/css/style.css}">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre | Donodont</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark">
-  <div class="container">
-    <a class="navbar-brand fw-bold" th:href="@{/}">dono<span>dont</span></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu"><span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="menu"><ul class="navbar-nav ms-auto">
-      <li class="nav-item"><a class="nav-link " th:href="@{/}">Início</a></li>
-      <li class="nav-item"><a class="nav-link active" th:href="@{/sobre}">Sobre</a></li>
-      <li class="nav-item"><a class="nav-link " th:href="@{/login}">Entrar</a></li>
-      <li class="nav-item"><a class="nav-link " th:href="@{/cadastro}">Cadastro</a></li>
-      <li class="nav-item"><a class="nav-link " th:href="@{/painel}">Painel</a></li>
-      <li class="nav-item"><a class="nav-link " th:href="@{/agendamento}">Agendamento</a></li>
-    </ul></div>
-  </div>
-</nav>
-
-<main><section class="page-intro"><div class="container"><span class="eyebrow">Quem somos</span><h1 class="mt-2">Sobre a Donodont</h1><p class="muted">Cuidado, atenção e compromisso com a saúde do seu sorriso.</p></div></section>
-<section class="container pb-5"><div class="row justify-content-center"><div class="col-lg-9"><div class="content-card">
-  <span class="pill">Nossa história</span><h2 class="fw-bold mt-3">Mais cuidado em cada sorriso</h2>
-  <p class="muted">A Donodont é uma clínica odontológica fictícia criada com a proposta de oferecer uma experiência de atendimento acolhedora, organizada e focada nas necessidades de cada paciente.</p>
-  <p class="muted">Nosso objetivo é apresentar informações sobre cuidados odontológicos e facilitar o acesso às etapas iniciais de atendimento por meio de um ambiente digital simples e intuitivo.</p>
-  <div class="row g-4 mt-2"><div class="col-md-6"><h3 class="h5 fw-bold text-brand">Nossa missão</h3><p class="muted mb-0">Incentivar a prevenção e valorizar a saúde bucal com atenção e respeito.</p></div><div class="col-md-6"><h3 class="h5 fw-bold text-brand">Nossa visão</h3><p class="muted mb-0">Ser reconhecida, dentro da proposta do projeto, pela clareza das informações e facilidade de navegação.</p></div></div>
-</div></div></div></section></main>
-<footer class="site-footer"><div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"><span><strong>Donodont</strong> · Cuidando do seu sorriso.</span><small>© 2026 Donodont. Todos os direitos reservados.</small></div></footer>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary"><div class="container">
+<a class="navbar-brand fw-bold" th:href="@{/}">Donodont</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="menu"><ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link " th:href="@{/}">Home</a></li>
+<li class="nav-item"><a class="nav-link active" th:href="@{/sobre}">Sobre</a></li>
+<li class="nav-item"><a class="nav-link " th:href="@{/login}">Login</a></li>
+<li class="nav-item"><a class="nav-link " th:href="@{/cadastro}">Cadastro</a></li>
+<li class="nav-item"><a class="nav-link " th:href="@{/painel}">Painel</a></li>
+<li class="nav-item"><a class="nav-link " th:href="@{/agendamento}">Agendamento</a></li>
+</ul></div></div></nav><main class="container py-5"><h1 class="text-primary text-center mb-4">Sobre a Donodont</h1><div class="row justify-content-center"><div class="col-md-8"><p class="lead text-center">Cuidando de sorrisos com qualidade e dedicação!</p><p>A Donodont é uma clínica odontológica criada com o objetivo de oferecer atendimento de qualidade e ajudar as pessoas a manterem uma boa saúde bucal.</p><p>Nossa proposta é proporcionar um ambiente acolhedor, com atenção às necessidades de cada paciente e compromisso com o cuidado e o bem-estar.</p><h3 class="text-primary mt-4">Nossa missão</h3><p>Promover saúde bucal e contribuir para que cada paciente tenha um sorriso saudável.</p></div></div></main><footer class="bg-primary text-white text-center py-3"><p class="mb-0">© 2026 Donodont - Todos os direitos reservados.</p></footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+</body></html>
