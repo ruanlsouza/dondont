@@ -2,6 +2,7 @@ package senai499.com.br.donodont.model;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import jakarta.persistence.*;
 
 @Entity
@@ -39,4 +40,7 @@ public class Agendamento {
     public LocalDate getDataConsulta() { return dataConsulta; }
     public void setDataConsulta(LocalDate dataConsulta) { this.dataConsulta = dataConsulta; }
     public LocalDateTime getCriadoEm() { return criadoEm; }
+    public String getDataConsultaFormatada() {
+        return dataConsulta == null ? "" : dataConsulta.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    }
 }
